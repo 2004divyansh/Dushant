@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BITMINERS — Bitcoin on Robinhood</title>
+
+
+    <!-- ================= FONTS ================= -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- ================= PDF.JS ================= -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+
+    <!-- ================= CSS ================= -->
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
+
+<div class="noise"></div>
+
+<div class="grid-background"></div>
+
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+
+    <div class="nav-left">
+
+
+        <a href="index.html" class="nav-logo-link">
+
+            <img
+                src="logobit.png"
+                alt="Bitminers"
+                class="nav-logo"
+            >
+
+        </a>
+
+
+        <div class="brand-name">
+            BITMINERS
+        </div>
+
+
+        <div class="network-status">
+
+            <span class="status-dot"></span>
+
+            COMING SOON ON ROBINHOOD
+
+        </div>
+
+
+    </div>
+
+
+
+    <nav class="nav-links">
+
+
+        <a href="#mechanism">
+            HOW IT WORKS
+        </a>
+
+
+        <a href="#treasury">
+            TREASURY
+        </a>
+
+
+        <a href="#terminal">
+            X
+        </a>
+
+
+        <!-- BUY BUTTON 1 -->
+        <a
+            href="coming-soon.html"
+            class="buy-button"
+        >
+            BUY $BIT
+        </a>
+
+
+    </nav>
+
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section
+    class="hero"
+    id="home"
+>
+
+
+    <div class="hero-background"></div>
+
+
+    <div class="hero-content">
+
+
+        <div class="hero-label">
+
+            BITCOIN × ROBINHOOD
+
+        </div>
+
+
+
+        <h1>
+
+
+            <span class="white-text">
+                MINE
+            </span>
+
+
+            <span class="green-text">
+                BITCOIN
+            </span>
+
+
+            <br>
+
+
+            <span class="white-text">
+                BY HOLDING $BIT.
+            </span>
+
+
+        </h1>
+
+
+
+        <p class="hero-description">
+
+            Bitminers turns token activity into Bitcoin
+            accumulation. Creator fees are used to acquire
+            Bitcoin and distribute it back to the $BIT community.
+
+        </p>
+
+
+
+        <div class="hero-buttons">
+
+
+            <!-- BUY BUTTON 2 -->
+            <a
+                href="coming-soon.html"
+                class="primary-button"
+            >
+
+                BUY $BIT
+
+                <span>
+                    →
+                </span>
+
+            </a>
+
+
+
+            <a
+                href="#mechanism"
+                class="secondary-button"
+            >
+
+                VIEW MECHANISM
+
+                <span>
+                    ↗
+                </span>
+
+            </a>
+
+
+        </div>
+
+
+
+        <div class="hero-subtext">
+
+            BUILT ON ROBINHOOD
+
+            <span>•</span>
+
+            POWERED BY BITCOIN
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTRACT
+===================================================== -->
+
+<section class="contract-section">
+
+
+    <div class="section-tag">
+        01 / CONTRACT
+    </div>
+
+
+
+    <div class="contract-window">
+
+
+        <div class="window-header">
+
+
+            <div class="window-dots">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+
+            <div class="window-title">
+
+                $BIT CONTRACT ADDRESS
+
+            </div>
+
+
+            <div class="verified">
+
+                <span class="status-dot"></span>
+
+                VERIFIED
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="contract-content">
+
+
+            <div>
+
+
+                <div class="small-label">
+
+                    ROBINHOOD TOKEN ADDRESS
+
+                </div>
+
+
+
+                <div
+                    class="contract-address"
+                    id="contractAddress"
+                >
+
+                    CA COMING SOON
+
+                </div>
+
+
+
+                <div class="contract-warning">
+
+                    ALWAYS VERIFY THE CONTRACT ADDRESS
+                    THROUGH OFFICIAL BITMINERS CHANNELS.
+
+                </div>
+
+
+            </div>
+
+
+
+            <button
+                class="copy-button"
+                id="copyContractButton"
+            >
+
+                ▣ &nbsp; COPY CA
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     MECHANISM
+===================================================== -->
+
+<section
+    class="mechanism-section"
+    id="mechanism"
+>
+
+
+    <div class="section-tag">
+        02 / MECHANISM
+    </div>
+
+
+
+    <div class="mechanism-inner">
+
+
+        <div class="mechanism-heading">
+
+
+            <h2>
+
+                TRADING FEES.
+
+                <br>
+
+                <span>
+                    REAL BITCOIN.
+                </span>
+
+            </h2>
+
+
+
+            <p>
+
+                Every $BIT trade creates activity.
+                Creator fees generated through the token
+                are redirected into a simple Bitcoin
+                accumulation loop.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="mechanism-cards">
+
+
+            <div class="mechanism-card">
+
+                <div class="card-number">01</div>
+
+                <h3>TRADE</h3>
+
+                <p>Users buy and sell $BIT on Robinhood.</p>
+
+                <div class="card-arrow">→</div>
+
+            </div>
+
+
+
+            <div class="mechanism-card">
+
+                <div class="card-number">02</div>
+
+                <h3>FEES</h3>
+
+                <p>Trading activity generates creator fees.</p>
+
+                <div class="card-arrow">→</div>
+
+            </div>
+
+
+
+            <div class="mechanism-card">
+
+                <div class="card-number">03</div>
+
+                <h3>BUY BTC</h3>
+
+                <p>Collected creator fees are periodically used to acquire Bitcoin.</p>
+
+                <div class="card-arrow">→</div>
+
+            </div>
+
+
+
+            <div class="mechanism-card">
+
+                <div class="card-number">04</div>
+
+                <h3>DISTRIBUTE</h3>
+
+                <p>
+                    Acquired Bitcoin is distributed
+                    to eligible $BIT holders according
+                    to published distribution rules.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="mechanism-flow">
+
+            ↻ TRADE → FEES → BTC → HOLDERS → REPEAT
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     WHITEPAPER
+===================================================== -->
+
+<section
+    class="whitepaper-section"
+    id="whitepaper"
+>
+
+
+    <div class="section-tag">
+        03 / WHITEPAPER
+    </div>
+
+
+
+    <div class="whitepaper-inner">
+
+
+        <div class="whitepaper-heading">
+
+
+            <div class="small-label">
+                BITMINERS DOCUMENTATION
+            </div>
+
+
+            <h2>
+
+                THE
+
+                <span>
+                    WHITEPAPER.
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Read the complete Bitminers protocol,
+                mechanism and ecosystem documentation.
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- ================= PDF VIEWER ================= -->
+
+        <div class="whitepaper-viewer">
+
+
+            <div class="whitepaper-topbar">
+
+
+                <div class="document-dots">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+
+                <div class="document-title">
+
+                    BITMINERS_WHITEPAPER.PDF
+
+                </div>
+
+
+                <div class="document-status">
+
+                    <span class="status-dot"></span>
+
+                    DOCUMENT
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="whitepaper-page">
+
+
+                <div class="pdf-loading" id="pdfLoading">
+
+                    LOADING WHITEPAPER...
+
+                </div>
+
+
+                <canvas id="pdfCanvas"></canvas>
+
+
+            </div>
+
+
+
+            <div class="whitepaper-controls">
+
+
+                <button id="previousPage" class="paper-button">
+
+                    ← PREVIOUS
+
+                </button>
+
+
+
+                <div class="page-counter">
+
+                    PAGE
+
+                    <span id="currentPage">1</span>
+
+                    /
+
+                    <span id="totalPages">—</span>
+
+                </div>
+
+
+
+                <button id="nextPage" class="paper-button">
+
+                    NEXT →
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="whitepaper-note">
+
+            <span>DOCUMENTATION</span>
+
+            <span>BITMINERS / 2026</span>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     TREASURY
+===================================================== -->
+
+<section
+    class="treasury-section"
+    id="treasury"
+>
+
+
+    <div class="section-tag">
+        04 / TREASURY
+    </div>
+
+
+
+    <div class="treasury-window">
+
+
+        <div class="treasury-header">
+
+
+            <strong>
+                BITCOIN TREASURY
+            </strong>
+
+
+            <div class="system-online">
+
+                <span class="status-dot"></span>
+
+                SYSTEM ONLINE
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="treasury-stats">
+
+
+            <div class="treasury-stat">
+
+                <div class="stat-title">BTC ACQUIRED</div>
+
+                <div class="stat-value">0.00000000</div>
+
+                <div class="stat-unit">BTC</div>
+
+            </div>
+
+
+
+            <div class="treasury-stat">
+
+                <div class="stat-title">TOTAL FEES DEPLOYED</div>
+
+                <div class="stat-value">$0.00</div>
+
+            </div>
+
+
+
+            <div class="treasury-stat">
+
+                <div class="stat-title">BTC DISTRIBUTED</div>
+
+                <div class="stat-value">0.00000000</div>
+
+                <div class="stat-unit">BTC</div>
+
+            </div>
+
+
+
+            <div class="treasury-stat">
+
+                <div class="stat-title">DISTRIBUTION EVENTS</div>
+
+                <div class="stat-value">0</div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="activity-window">
+
+
+            <div class="activity-header">
+
+                <span>TREASURY ACTIVITY</span>
+
+                <span>0 RECORDS</span>
+
+            </div>
+
+
+
+            <div class="activity-columns">
+
+                <span>TYPE</span>
+
+                <span>AMOUNT</span>
+
+                <span>DATE</span>
+
+                <span>TX</span>
+
+            </div>
+
+
+
+            <div class="activity-empty">
+
+                [
+
+                <span>WAITING FOR FIRST BTC PURCHASE</span>
+
+                <i></i>
+
+                ]
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="treasury-footer">
+
+
+            <span>TREASURY ADDRESS:</span>
+
+
+            <strong>BITCOIN TREASURY ADDRESS</strong>
+
+
+            <button class="verify-button">
+
+                ◈ VERIFY TREASURY
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     CULTURE
+===================================================== -->
+
+<section class="culture-section">
+
+
+    <div class="section-tag">
+        05 / CULTURE
+    </div>
+
+
+
+    <div class="culture-image">
+
+
+        <div class="reserve-label">
+
+            ₿ RESERVE ASSET
+
+        </div>
+
+
+
+        <div class="big-coin">
+
+            <img src="logo.gif" alt="Bitminers Logo">
+
+        </div>
+
+
+
+        <div class="reserve-status">
+
+            ◉ ROBINHOOD RAILS
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="culture-content">
+
+
+        <h2>
+
+            BITCOIN CULTURE.
+
+            <br>
+
+            <span>
+                ROBINHOOD RAILS.
+            </span>
+
+        </h2>
+
+
+
+        <p>
+
+            Bitcoin represents digital scarcity.
+            Robinhood provides the rails for token
+            activity. Bitminers connects the two through
+            a simple fee-to-Bitcoin mechanism.
+
+        </p>
+
+
+
+        <div class="system-profile">
+
+
+            <div class="profile-header">
+
+                SYSTEM.PROFILE
+
+            </div>
+
+
+            <div class="profile-row">
+                <span>NETWORK</span>
+                <strong>ROBINHOOD</strong>
+            </div>
+
+
+            <div class="profile-row">
+                <span>TOKEN</span>
+                <strong>$BIT</strong>
+            </div>
+
+
+            <div class="profile-row">
+                <span>ORIGIN</span>
+                <strong>BITMINERS</strong>
+            </div>
+
+
+            <div class="profile-row">
+                <span>RESERVE</span>
+                <strong class="green-text">BITCOIN</strong>
+            </div>
+
+
+            <div class="profile-row">
+                <span>STATUS</span>
+                <strong class="green-text">LIVE</strong>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     HOLDERS
+===================================================== -->
+
+<section class="holders-section">
+
+
+    <div class="section-tag">
+        06 / HOLDERS
+    </div>
+
+
+
+    <div class="holders-inner">
+
+
+        <h2>
+
+            BUILT FOR
+
+            <span>
+                HOLDERS.
+            </span>
+
+        </h2>
+
+
+
+        <p class="holders-description">
+
+            Bitcoin acquired through the project is intended
+            for distribution back to eligible $BIT holders.
+            Distribution criteria, snapshots, minimum thresholds
+            and timing should be published transparently before
+            each distribution.
+
+        </p>
+
+
+
+        <div class="holder-cards">
+
+
+            <div class="holder-card">
+
+                <div class="card-number">01</div>
+
+                <div class="holder-icon">♧</div>
+
+                <h3>HOLD</h3>
+
+                <p>Hold $BIT in an eligible Robinhood wallet.</p>
+
+            </div>
+
+
+
+            <div class="holder-card">
+
+                <div class="card-number">02</div>
+
+                <div class="holder-icon">◎</div>
+
+                <h3>SNAPSHOT</h3>
+
+                <p>
+                    Eligible wallets are identified
+                    according to the published
+                    distribution rules.
+                </p>
+
+            </div>
+
+
+
+            <div class="holder-card">
+
+                <div class="card-number">03</div>
+
+                <div class="holder-icon">↓</div>
+
+                <h3>RECEIVE</h3>
+
+                <p>
+                    Qualifying holders receive their
+                    allocation when a distribution
+                    is executed.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     TERMINAL
+===================================================== -->
+
+<section
+    class="terminal-section"
+    id="terminal"
+>
+
+
+    <div class="section-tag">
+        07 / TERMINAL
+    </div>
+
+
+
+    <div class="terminal-inner">
+
+
+        <div class="terminal-window">
+
+
+            <div class="terminal-header">
+
+
+                <div class="window-dots">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+
+                <div>
+                    BITMINERS.ROBINHOOD
+                </div>
+
+
+                <div class="terminal-connected">
+
+                    ● CONNECTED
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="terminal-body" id="terminalBody">
+
+                <p>&gt; initializing bitminers</p>
+
+                <p>&gt; network: robinhood</p>
+
+                <p>&gt; token: $BIT</p>
+
+                <p class="terminal-green">&gt; creator_fee_engine: ONLINE</p>
+
+                <p class="terminal-green">&gt; bitcoin_accumulator: ONLINE</p>
+
+                <p class="terminal-green">&gt; holder_distribution: STANDBY</p>
+
+                <p class="terminal-gray">&gt; searching for blocks...</p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <button class="terminal-button" id="terminalButton">
+
+            ACCESS MINING TERMINAL →
+
+        </button>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL SECTION
+===================================================== -->
+
+<section class="final-section">
+
+
+    <div class="final-content">
+
+
+        <h2>
+
+            BITCOIN STARTED
+
+            <br>
+
+            WITH COMPUTERS
+
+            <br>
+
+            IN
+
+            <span>
+                BEDROOMS.
+            </span>
+
+        </h2>
+
+
+
+        <p>
+
+            Before institutions, ETFs and billion-dollar
+            mining operations, Bitcoin belonged to internet
+            explorers running strange software on ordinary
+            computers.
+
+        </p>
+
+
+
+        <strong>
+
+            Bitminers is a tribute to that era
+            rebuilt for today's on-chain culture.
+
+        </strong>
+
+
+
+        <div class="final-slogan">
+
+            MINE THE PAST.
+
+            <br>
+
+            BUILD THE FUTURE.
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div>₿ BITMINERS</div>
+
+    <div>BITCOIN × ROBINHOOD</div>
+
+    <div>© 2026 BITMINERS</div>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
