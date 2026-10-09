@@ -77,6 +77,35 @@ if (canvas && typeof pdfjsLib !== "undefined") {
     const previousButton = document.getElementById("previousPage");
     const nextButton = document.getElementById("nextPage");
     const loadingElement = document.getElementById("pdfLoading");
+    const zoomInButton = document.getElementById("zoomIn");
+    const zoomOutButton = document.getElementById("zoomOut");
+    const zoomLabel = document.getElementById("zoomLevel");
+
+    /* Phones start zoomed in so the text is readable */
+    const isMobile = window.innerWidth <= 800;
+    let zoomLevel = isMobile ? 2.2 : 1;
+    const MIN_ZOOM = isMobile ? 1 : 0.6;
+    const MAX_ZOOM = 4;
+
+    function changeZoom(delta) {
+
+        const next = Math.round((zoomLevel + delta) * 10) / 10;
+        zoomLevel = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, next));
+        queueRenderPage(currentPage);
+
+    }
+
+    if (zoomInButton) zoomInButton.addEventListener("click", () => changeZoom(0.4));
+    if (zoomOutButton) zoomOutButton.addEventListener("click", () => changeZoom(-0.4));
+
+    /* Re-render when the phone is rotated / window resized */
+    let resizeTimer = null;
+    window.addEventListener("resize", () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            if (pdfDocument) queueRenderPage(currentPage);
+        }, 250);
+    });
 
     /* PDF.js worker */
 
@@ -122,14 +151,29 @@ if (canvas && typeof pdfjsLib !== "undefined") {
         pdfDocument.getPage(pageNumber).then(page => {
 
             const pageContainer = document.querySelector(".whitepaper-page");
-            const availableWidth = pageContainer.clientWidth - 60;
+            const padding = window.innerWidth <= 800 ? 20 : 60;
+            const availableWidth = pageContainer.clientWidth - padding;
             const baseViewport = page.getViewport({ scale: 1 });
 
-            const scale = Math.min(availableWidth / baseViewport.width, 1.5);
-            const viewport = page.getViewport({ scale: scale });
+            /* Fit-to-width scale, multiplied by the zoom level.
+               On phones the fit-to-width scale makes text tiny,
+               so zoom starts higher and the page scrolls sideways. */
+            const fitScale = availableWidth / baseViewport.width;
+            const maxFit = window.innerWidth <= 800 ? fitScale : Math.min(fitScale, 1.5);
+            const cssScale = maxFit * zoomLevel;
+
+            /* Render at the device pixel ratio so text stays sharp */
+            const dpr = Math.min(window.devicePixelRatio || 1, 3);
+            const viewport = page.getViewport({ scale: cssScale * dpr });
 
             canvas.width = viewport.width;
             canvas.height = viewport.height;
+            canvas.style.width = (viewport.width / dpr) + "px";
+            canvas.style.height = (viewport.height / dpr) + "px";
+
+            if (zoomLabel) {
+                zoomLabel.innerText = Math.round(zoomLevel * 100) + "%";
+            }
 
             page
                 .render({ canvasContext: canvasContext, viewport: viewport })

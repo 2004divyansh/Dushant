@@ -635,17 +635,52 @@ footer {
     min-height: 750px;
     padding: 30px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     background: radial-gradient(circle at center, rgba(255,255,255,.025), transparent 60%);
-    overflow: hidden;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
+/* margin:auto centers the page when it is smaller than the box,
+   and lets it scroll from the left edge when it is larger */
 #pdfCanvas {
     display: none;
-    max-width: 100%;
-    height: auto;
+    margin: auto;
+    flex-shrink: 0;
     box-shadow: 0 25px 70px rgba(0,0,0,.6);
+}
+
+.pdf-loading { margin: auto; }
+
+/* ZOOM BAR */
+
+.whitepaper-zoom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--border);
+    color: #777;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.whitepaper-zoom #zoomLevel {
+    min-width: 50px;
+    text-align: center;
+    color: var(--green);
+}
+
+.whitepaper-zoom .paper-button {
+    min-width: 40px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.whitepaper-zoom .open-pdf {
+    margin-left: 14px;
+    font-size: 9px;
 }
 
 .pdf-loading {
